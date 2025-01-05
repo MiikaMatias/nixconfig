@@ -5,11 +5,12 @@
     enableCompletion=true;
     autosuggestions.enable=true;
     shellAliases = {
-    	config="sudo nvim /etc/nixos/configuration.nix";
+    	config="code /etc/nixos";
     	update="sudo nixos-rebuild switch";
       f="firefox";
       gs="git status";
       ga="git add";
+      k="kubectl";
     };
   };
 

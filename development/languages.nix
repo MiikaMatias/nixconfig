@@ -2,6 +2,7 @@
 {
     environment.systemPackages = with pkgs; [
       go
+      valgrind
       # In case needed
       #(pkgs.rstudioWrapper.override {
       #	packages = with pkgs.rPackages; [

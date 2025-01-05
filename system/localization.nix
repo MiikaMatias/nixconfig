@@ -1,6 +1,6 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
-  time.timeZone = "Europe/Helsinki";
+  time.timeZone = "America/Toronto";
 
   i18n.defaultLocale = "en_US.UTF-8";
 

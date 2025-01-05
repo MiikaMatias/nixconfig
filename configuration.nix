@@ -8,12 +8,15 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05";
   nixpkgs.config.allowUnfree = true;
+  # nix.settings.experimental-features = ["nix-command" "flakes"];
   imports =
   [
+    ./development/k8s.nix
     ./development/languages.nix
     ./development/models.nix
     ./development/utilities.nix
 
+    ./gaming/general.nix
     ./gaming/steam.nix
 
     ./hardware-configuration.nix
@@ -24,6 +27,7 @@
 
     ./system/audio.nix
     ./system/bootloader.nix
+    ./system/cron.nix
     ./system/displayserver.nix
     ./system/localization.nix
     ./system/networking.nix
@@ -33,3 +37,4 @@
 
 
 }
+
