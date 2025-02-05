@@ -3,7 +3,7 @@
     environment.systemPackages = with pkgs; [
       go
       valgrind
-      python
+      python3
       # In case needed
       #(pkgs.rstudioWrapper.override {
       #	packages = with pkgs.rPackages; [
