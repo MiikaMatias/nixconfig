@@ -6,7 +6,11 @@
       autosuggestions.enable=true;
       shellAliases = {
         config="code /etc/nixos";
-        update="sudo nixos-rebuild switch";
+        update="""
+        git add /etc/nixos/. && 
+        git commit -m 'flakes rebuild' && 
+        sudo nixos-rebuild switch --flake . --impure
+        """;
         f="firefox";
         gs="git status";
         ga="git add";
