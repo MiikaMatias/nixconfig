@@ -20,4 +20,15 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  services.create_ap = {
+      enable = true;
+      settings = {
+        INTERNET_IFACE = "eth0";
+        WIFI_IFACE = "wlan0";
+        SSID = "NIXOS";
+        PASSPHRASE = "kurwabober";
+      };
+  };
+
 }

@@ -1,14 +1,25 @@
 { config, pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    droidcam
-    gparted
-    kdenlive
-    neofetch
-    obsidian
-    unzip
-    wget
-    yt-dlp
-    ngrok
-    (pkgs.wrapOBS { plugins = with pkgs.obs-studio-plugins; [ wlrobs obs-backgroundremoval obs-pipewire-audio-capture ]; })  ];
+      gpu-screen-recorder-gtk
+      droidcam
+      gparted
+      kdenlive
+      neofetch
+      obsidian
+      unzip
+      wget
+      yt-dlp
+      ngrok
+      arduino
+      discord
+      scrcpy
+      spotify
+      (pkgs.wrapOBS { plugins = with pkgs.obs-studio-plugins; [ wlrobs obs-backgroundremoval obs-pipewire-audio-capture ]; }) 
+      gcc
+      gnumake
+      glibc
+    ];
+
+    programs.adb.enable = true;
 }

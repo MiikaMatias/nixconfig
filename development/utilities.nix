@@ -4,6 +4,7 @@
       vscode
       git
       postman
+      sqlite
   ];
 
   virtualisation.docker.enable = true;

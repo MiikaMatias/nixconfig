@@ -1,5 +1,7 @@
 { config, pkgs, ... }:
 {
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -13,8 +15,11 @@
   [
     ./development/k8s.nix
     ./development/languages.nix
+    ./development/llvm.nix
     ./development/models.nix
+    ./development/terraform.nix
     ./development/utilities.nix
+    ./development/virtualbox.nix
 
     ./gaming/general.nix
     ./gaming/steam.nix
