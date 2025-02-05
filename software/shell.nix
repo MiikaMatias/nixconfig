@@ -6,7 +6,7 @@
       autosuggestions.enable=true;
       shellAliases = {
         config="code /etc/nixos";
-        update="sudo nixos-rebuild switch --flake . --impure && git add /etc/nixos/. && git commit -m \"flakes rebuild $(date '+%Y-%m-%d %H:%M:%S')\" && git push";
+        update="sudo nixos-rebuild switch --flake . --impure && git add /etc/nixos/. && git commit -m \"flakes rebuild $(date '+%Y-%m-%d %H:%M:%S') \n Changes: $(git diff --name-only --staged | tr '\n' ' ')\" && git push";
         f="firefox";
         gs="git status";
         ga="git add";
