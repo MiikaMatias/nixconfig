@@ -9,6 +9,7 @@
         update="""
         git add /etc/nixos/. && 
         git commit -m 'flakes rebuild' && 
+        git push &&
         sudo nixos-rebuild switch --flake . --impure
         """;
         f="firefox";
