@@ -21,6 +21,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  /*
   services.create_ap = {
       enable = true;
       settings = {
@@ -30,5 +31,6 @@
         PASSPHRASE = "kurwabober";
       };
   };
+  */
 
 }
