@@ -1,9 +1,25 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
-    # We use x11 and need startx to start plasma
-    services.xserver.enable=true;
-    services.xserver.videoDrivers=["nvidia"];
-    services.displayManager.sddm.enable=true;
-    services.displayManager.sddm.wayland.enable=true;
-    services.desktopManager.plasma6.enable=true;
+    # Enable X server (for compatibility, though Hyprland runs on Wayland)
+    services.xserver.enable = true;
+    services.xserver.videoDrivers = [ "nvidia" ];
+
+    # Enable Hyprland
+    programs.hyprland.enable = true;
+
+    # Install necessary dependencies
+    environment.systemPackages = with pkgs; [
+        hyprland
+        xdg-desktop-portal-hyprland
+        waybar  # Status bar
+        rofi-wayland  # App launcher
+        wl-clipboard  # Clipboard support
+        mako  # Notifications
+        grim slurp  # Screenshots
+        swww  # Wallpaper support
+        kitty  # Terminal emulator
+    ];
+
+    # Set Hyprland as the default session
+    services.displayManager.defaultSession = "hyprland";
 }
