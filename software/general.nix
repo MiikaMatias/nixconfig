@@ -10,6 +10,7 @@
       unzip
       wget
       yt-dlp
+      tree
       ngrok
       arduino
       discord
