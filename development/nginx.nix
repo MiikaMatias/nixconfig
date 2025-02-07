@@ -1,23 +1,26 @@
-{config, lib, pkgs, modulesPath, ...}:
+{ config, pkgs, ... }:
+
 {
   services.nginx = {
-        enable = true;
-        virtualHosts."kontrakti.com" = {
-            forceSSL = true;
-            enableACME = true;
-            locations."/" = {
-                proxyPass = "http://localhost:8000";
-                proxyWebSockets = true;
-            };
-            locations."/static/" = {
-                root = "/home/miika/Projects/portfolio/templates";  # Serve static files
-            };
+    enable = true;
+    virtualHosts = {
+      "kontrakti.com" = {  #
+        forceSSL = true;  
+        enableACME = true; 
+        root = "/home/miika/www/kontrakti.com";
+        locations."/" = {
+          proxyPass = "http://localhost:8080"; 
         };
+        locations."/static/" = {
+          root = "/home/user/project/templates";
+        };
+      };
     };
+  };
 
   security.acme = {
     acceptTerms = true;
-    defaults.email = "your-email@example.com";
+    defaults.email = "miikapiiparinen24@gmail.com";
   };
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];

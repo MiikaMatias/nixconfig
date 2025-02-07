@@ -4,6 +4,7 @@
       vscode
       git
       postman
+      dig
       sqlite
   ];
 
