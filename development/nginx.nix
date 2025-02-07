@@ -2,14 +2,23 @@
 {
   services.nginx = {
         enable = true;
-        virtualHosts.localhost = {
+        virtualHosts."kontrakti.com" = {
+            forceSSL = true;
+            enableACME = true;
             locations."/" = {
-            return = "200 '<html><body>It works</body></html>'";
-            extraConfig = ''
-                default_type text/html;
-            '';
+                proxyPass = "http://localhost:8000";
+                proxyWebSockets = true;
+            };
+            locations."/static/" = {
+                root = "/home/miika/Projects/portfolio/templates";  # Serve static files
             };
         };
     };
 
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "your-email@example.com";
+  };
+
+  networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
