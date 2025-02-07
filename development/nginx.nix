@@ -4,13 +4,19 @@
   services.nginx = {
     enable = true;
     virtualHosts = {
-      "kontrakti.com" = {  #
-        forceSSL = true;  
-        enableACME = true; 
+      "kontrakti.com" = {
+        forceSSL = true;
+        enableACME = true;
         root = "/home/miika/www/kontrakti.com";
-        locations."/" = {
-          proxyPass = "http://localhost:8080"; 
+
+        locations."/.well-known/acme-challenge/" = {
+          root = "/var/lib/acme";
         };
+
+        locations."/" = {
+          proxyPass = "http://localhost:8080";
+        };
+
         locations."/static/" = {
           root = "/home/user/project/templates";
         };
@@ -23,5 +29,4 @@
     defaults.email = "miikapiiparinen24@gmail.com";
   };
 
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
