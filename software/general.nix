@@ -12,6 +12,7 @@
       yt-dlp
       tree
       ngrok
+      gimp
       arduino
       discord
       vlc
