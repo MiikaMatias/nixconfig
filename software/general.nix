@@ -12,6 +12,7 @@
       yt-dlp
       tree
       ngrok
+      nginx
       arduino
       discord
       vlc
