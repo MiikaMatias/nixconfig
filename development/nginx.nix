@@ -6,9 +6,11 @@
     virtualHosts."kontrakti.com" = {
       forceSSL = false;
       enableACME = false;
+      locations."/.well-known/acme-challenge/" = {
+        root = "/var/lib/acme";
+      };
     };
   };
-
   /*
   security.acme = {
     acceptTerms = true;
