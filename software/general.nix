@@ -10,6 +10,7 @@
       unzip
       wget
       yt-dlp
+      lsof
       tree
       ngrok
       gimp
