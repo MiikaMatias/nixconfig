@@ -1,6 +1,6 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 8080];
   networking.hostName = "schworshp"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -23,7 +23,7 @@
   # networking.firewall.enable = false;
 
   /*
-  services.create_ap = {
+  services.create_ap = {W
       enable = true;
       settings = {
         INTERNET_IFACE = "eth0";
