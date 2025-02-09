@@ -8,7 +8,7 @@
       sqlite
   ];
 
-  virtualisation.docker.enable = true;
+  virtualisation.docker.enable = false;
 
   programs.neovim = {
     enable=true;
