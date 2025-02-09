@@ -7,20 +7,7 @@
   networking.hostName = "schworshp";
 
   networking.nat.enableIPv6 = true;
-  networking.firewall.enable = true;
-  networking.nat.forwardPorts = [
-  {
-    destination = "127.0.0.1:8080"; 
-    proto = "tcp";
-    sourcePort = 80;
-  }
-  {
-    destination = "[::1]:8080";
-    proto = "tcp";
-    sourcePort = 80;
-  }
-];
-
+  networking.firewall.enable = false;
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
