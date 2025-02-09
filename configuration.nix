@@ -15,7 +15,7 @@
     ./development/languages.nix
     ./development/llvm.nix
     ./development/models.nix
-    ./development/nginx.nix
+    #./development/nginx.nix
     ./development/terraform.nix
     ./development/utilities.nix
     ./development/virtualbox.nix

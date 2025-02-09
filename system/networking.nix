@@ -1,6 +1,8 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
-  networking.firewall.allowedTCPPorts = [ 80 443 8080];
+  networking.networkmanager.enable = true;
+  networking.firewall.allowedTCPPorts = [ 80 443 ];
+  boot.kernel.sysctl."net.ipv4.ip_unprivileged_port_start" = 0;
   networking.hostName = "schworshp"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -9,18 +11,10 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager.enable = true;
-
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   /*
   services.create_ap = {W
