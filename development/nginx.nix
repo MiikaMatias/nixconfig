@@ -5,8 +5,9 @@
     enable = true;
     virtualHosts = {
       "kontrakti.com" = {
-        forceSSL = true;
-        enableACME = true;
+        
+        forceSSL = false;
+        enableACME = false;
         root = "/home/miika/www/kontrakti.com";
 
         locations."/.well-known/acme-challenge/" = {
@@ -24,9 +25,10 @@
     };
   };
 
+  /*
   security.acme = {
     acceptTerms = true;
     defaults.email = "miikapiiparinen24@gmail.com";
   };
-
+  */
 }
