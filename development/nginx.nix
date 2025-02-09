@@ -11,13 +11,15 @@
       };
     };
   };
+  
   /*
   security.acme = {
     acceptTerms = true;
-    defaults.email = "your@email.com";  # Replace with your email
-    certs."yourdomain.com" = {
-      webroot = "/var/lib/acme/acme-challenge"; # Directory for the challenge
+    defaults.email = "miikapiiparinen24@gmail.com";
+    certs."kontrakti.com" = {
+      webroot = "/var/lib/acme/acme-challenge";
     };
   };
   */
+  
 }
