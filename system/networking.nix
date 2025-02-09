@@ -7,7 +7,7 @@
   networking.hostName = "schworshp";
 
   networking.nat.enableIPv6 = true;
-  networking.firewall.enable = false;
+  networking.firewall.enable = true;
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
