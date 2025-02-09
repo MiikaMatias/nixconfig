@@ -8,6 +8,7 @@
       neofetch
       obsidian
       unzip
+      sshpass
       wget
       yt-dlp
       lsof

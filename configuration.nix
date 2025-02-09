@@ -11,11 +11,10 @@
   nixpkgs.config.allowUnfree = true;
   imports =
   [
-    #./development/k8s.nix
+    ./development/k8s.nix
     ./development/languages.nix
     ./development/llvm.nix
     ./development/models.nix
-    #./development/nginx.nix
     ./development/terraform.nix
     ./development/utilities.nix
     ./development/virtualbox.nix
