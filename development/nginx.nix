@@ -3,32 +3,19 @@
 {
   services.nginx = {
     enable = true;
-    virtualHosts = {
-      "kontrakti.com" = {
-        
-        forceSSL = false;
-        enableACME = false;
-        root = "/home/miika/www/kontrakti.com";
-
-        locations."/.well-known/acme-challenge/" = {
-          root = "/var/lib/acme";
-        };
-
-        locations."/" = {
-          proxyPass = "http://localhost:8080";
-        };
-
-        locations."/static/" = {
-          root = "/home/user/project/templates";
-        };
-      };
+    virtualHosts."kontrakti.com" = {
+      forceSSL = false;
+      enableACME = false;
     };
   };
 
   /*
   security.acme = {
     acceptTerms = true;
-    defaults.email = "miikapiiparinen24@gmail.com";
+    defaults.email = "your@email.com";  # Replace with your email
+    certs."yourdomain.com" = {
+      webroot = "/var/lib/acme/acme-challenge"; # Directory for the challenge
+    };
   };
   */
 }
