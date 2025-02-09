@@ -6,6 +6,19 @@
   boot.kernel.sysctl."net.ipv6.ip_unprivileged_port_start" = 0;
   networking.hostName = "schworshp";
   networking.nat.enableIPv6 = true;
+
+  networking.nat.forwardPorts  = [
+    {
+      destination = "0.0.0.0:8080";
+      proto = "tcp";
+      sourcePort = 80;
+    }
+    {
+      destination = "[::1]:8080";
+      proto = "tcp";
+      sourcePort = 80;
+    }
+  ];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
