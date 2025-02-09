@@ -7,18 +7,12 @@
   networking.hostName = "schworshp";
 
   networking.nat.enableIPv6 = true;
-  networking.nat.forwardPorts = [
-    {
-      destination = "127.0.0.1:8080";
-      proto = "tcp";
-      sourcePort = 80;
-    }
-    {
-      destination = "[::1]:8080";
-      proto = "tcp";
-      sourcePort = 80;
-    }
-  ];
+  networking.firewall.enable = true;
+  networking.firewall.extraCommands = ''
+    iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+    ip6tables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+  '';
+
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
