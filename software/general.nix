@@ -9,6 +9,7 @@
       obsidian
       unzip
       sshpass
+      wireshark
       wget
       yt-dlp
       lsof
