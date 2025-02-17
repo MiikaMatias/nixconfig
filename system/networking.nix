@@ -59,10 +59,54 @@
 
 
   # Here we set up website blocks
-  networking.extraHosts = ''
-    0.0.0.0 youtube.com
-    0.0.0.0 www.youtube.com
-    0.0.0.0 m.youtube.com
+  networking.firewall.extraCommands = ''
+    # Allow essential productivity sites
+    iptables -A OUTPUT -p tcp --dport 80 -d stackoverflow.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d stackoverflow.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d github.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d github.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d chat.openai.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d chat.openai.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d medium.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d medium.com -j ACCEPT
+
+    # Allow UofT student websites
+    iptables -A OUTPUT -p tcp --dport 80 -d utoronto.ca -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d utoronto.ca -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d portal.utoronto.ca -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d portal.utoronto.ca -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d library.utoronto.ca -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d library.utoronto.ca -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d q.utoronto.ca -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d q.utoronto.ca -j ACCEPT
+
+    # Allow Gmail
+    iptables -A OUTPUT -p tcp --dport 80 -d mail.google.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d mail.google.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d gmail.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d gmail.com -j ACCEPT
+
+    # Allow Discord for communication
+    iptables -A OUTPUT -p tcp --dport 80 -d discord.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d discord.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d cdn.discordapp.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d cdn.discordapp.com -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d media.discordapp.net -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d media.discordapp.net -j ACCEPT
+
+    # Allow Finnish news sites (HS.fi & YLE.fi)
+    iptables -A OUTPUT -p tcp --dport 80 -d hs.fi -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d hs.fi -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 80 -d yle.fi -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d yle.fi -j ACCEPT
+
+    # Allow Wikipedia for research
+    iptables -A OUTPUT -p tcp --dport 80 -d wikipedia.org -j ACCEPT
+    iptables -A OUTPUT -p tcp --dport 443 -d wikipedia.org -j ACCEPT
+
+    # Block everything else
+    iptables -A OUTPUT -p tcp --dport 80 -j REJECT
+    iptables -A OUTPUT -p tcp --dport 443 -j REJECT
   '';
 
 }
