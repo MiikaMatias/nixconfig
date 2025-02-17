@@ -10,6 +10,7 @@
       unzip
       sshpass
       wireshark
+      iw
       wget
       yt-dlp
       lsof

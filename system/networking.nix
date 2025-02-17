@@ -6,6 +6,33 @@
 
   networking.firewall.enable = true;
 
+  security.sudo.extraRules = [
+    {
+      users = [ "miika" ]; 
+      commands = [
+        { command = "/bin/ip"; options = [ "NOPASSWD" ]; }
+        { command = "/bin/iw"; options = [ "NOPASSWD" ]; }
+      ];
+    }
+  ];
+
+  systemd.services.monitor-mode = {
+    description = "Enable Monitor Mode on Wi-Fi Interface";
+    after = [ "network.target" ];
+    wantedBy = [ "multi-user.target" ];
+
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      ExecStart = [
+        "${pkgs.iproute2}/bin/ip link set wlo1 down"
+        "${pkgs.iw}/bin/iw dev wlo1 set type monitor"
+        "${pkgs.iproute2}/bin/ip link set wlo1 up"
+      ];
+    };
+  };
+
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -29,5 +56,13 @@
       };
   };
   */
+
+
+  # Here we set up website blocks
+  networking.extraHosts = ''
+    0.0.0.0 youtube.com
+    0.0.0.0 www.youtube.com
+    0.0.0.0 m.youtube.com
+  '';
 
 }
