@@ -7,6 +7,19 @@
     ];
     services.xserver.windowManager.dwm.enable = true;
     services.xserver.displayManager.defaultSession = "none+dwm";
+    nixpkgs = {
+        overlays = [
+        (self: super: {
+            dwm = super.dwm.overrideAttrs (oldattrs: {
+                src = fetchGit {
+                    url = "https://github.com/MiikaMatias/dwm.git";
+                }; 
+            });
+        })
+        ]; 
+    };
+
+
 
     /*
     services.xserver.windowManager.dwm.package = pkgs.dwm.override {
