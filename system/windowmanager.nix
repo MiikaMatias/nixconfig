@@ -17,21 +17,6 @@
                 }; 
             });
 
-            dwm-status = super.stdenv.mkDerivation {
-                pname = "dwm-status";
-                version = "1.0";
-
-                src = fetchGit {
-                    url = "https://github.com/MiikaMatias/dwm.git";
-                    rev = "HEAD";
-                };
-
-                installPhase = ''
-                    mkdir -p $out/bin
-                    cp $src/scripts/dwm-status $out/bin/dwm-status
-                    chmod +x $out/bin/dwm-status
-                '';
-            };
         })
         ]; 
     };
