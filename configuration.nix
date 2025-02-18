@@ -32,6 +32,7 @@
     ./system/bootloader.nix
     ./system/cron.nix
     ./system/displayserver.nix
+    ./system/lid.nix
     ./system/localization.nix
     ./system/networking.nix
     ./system/nvidia.nix
