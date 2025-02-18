@@ -16,12 +16,16 @@
                     rev = "f9edc4e3831dac811054a49bcc230bdd4e0e72c8";
                 }; 
             });
+
+            installPhase = ''
+                mkdir -p $out/bin
+                cp $src/scripts/dwm-status $out/bin/dwm-status
+                chmod +x $out/bin/dwm-status
+            '';
         })
         ]; 
     };
-
-
-
+    
     /*
     services.xserver.windowManager.dwm.package = pkgs.dwm.override {
         patches = [
