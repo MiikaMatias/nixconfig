@@ -59,6 +59,7 @@
 
 
   # Here we set up website blocks
+  /*
   networking.firewall.extraCommands = ''
     # Allow essential productivity sites
     iptables -A OUTPUT -p tcp --dport 80 -d stackoverflow.com -j ACCEPT
@@ -108,5 +109,5 @@
     iptables -A OUTPUT -p tcp --dport 80 -j REJECT
     iptables -A OUTPUT -p tcp --dport 443 -j REJECT
   '';
-
+  */
 }

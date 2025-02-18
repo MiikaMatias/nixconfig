@@ -36,6 +36,7 @@
     ./system/networking.nix
     ./system/nvidia.nix
     ./system/users.nix
+    ./system/windowmanager.nix
   ];
 
 
