@@ -8,7 +8,7 @@
     services.xserver.windowManager.dwm.enable = true;
     services.xserver.displayManager.defaultSession = "none+dwm";
     services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
-        src = ./suckless/dwm;
+        src = builtins.path { path = /etc/nixos/suckless; };
     };
 
     /*
