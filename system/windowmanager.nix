@@ -10,10 +10,9 @@
     
     /*
     services.xserver.windowManager.dwm.package = pkgs.dwm.override {
-    patches = [
-        ./path/to/local.patch
-    ];
+        patches = [
+            ./path/to/local.patch
+        ];
     };
     */
-
 }

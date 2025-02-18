@@ -1,0 +1,1 @@
+/home/miika/.config/home-manager/home.nix
