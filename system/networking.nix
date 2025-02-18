@@ -105,7 +105,7 @@
     iptables -A OUTPUT -p tcp --dport 80 -d wikipedia.org -j ACCEPT
     iptables -A OUTPUT -p tcp --dport 443 -d wikipedia.org -j ACCEPT
 
-    # Block everything else
+    # Block everything elsew
     iptables -A OUTPUT -p tcp --dport 80 -j REJECT
     iptables -A OUTPUT -p tcp --dport 443 -j REJECT
   '';

@@ -13,7 +13,7 @@
       inherit system;
       modules = [
         ./configuration.nix
-        (import /etc/nixos/hardware-configuration.nix) # don't lock hardware 
+        (import /etc/nixos/hardware-configuration.nix)
       ];
     };
   };
