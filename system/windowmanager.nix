@@ -13,6 +13,7 @@
             dwm = super.dwm.overrideAttrs (oldattrs: {
                 src = fetchGit {
                     url = "https://github.com/MiikaMatias/dwm.git";
+                    rev = "f9edc4e3831dac811054a49bcc230bdd4e0e72c8";
                 }; 
             });
         })
