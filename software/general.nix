@@ -13,6 +13,7 @@
       iw
       wget
       yt-dlp
+      scrot
       lsof
       tree
       ngrok
