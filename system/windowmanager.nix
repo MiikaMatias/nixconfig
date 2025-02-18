@@ -25,7 +25,8 @@
         })
         ]; 
     };
-    
+
+
     /*
     services.xserver.windowManager.dwm.package = pkgs.dwm.override {
         patches = [
