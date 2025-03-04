@@ -12,6 +12,7 @@
       iw
       wget
       yt-dlp
+      tmux
       scrot
       lsof
       tree
