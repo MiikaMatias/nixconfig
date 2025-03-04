@@ -14,6 +14,16 @@
         xcompmgr
     ];
 
+    systemd.user.services.xcompmgr = {
+      description = "X Composite Manager";
+      after = [ "graphical-session.target" ];
+      wantedBy = [ "default.target" ];
+      serviceConfig = {
+          ExecStart = "${pkgs.xcompmgr}/bin/xcompmgr -c";
+          Restart = "always";
+      };
+    };
+
 
     programs.zsh = {
       enable=true;
