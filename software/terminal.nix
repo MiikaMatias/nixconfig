@@ -1,8 +1,5 @@
 {config, pkgs, ...} :
 {
-    environment.systemPackages = with pkgs; [
-        st
-    ];
 
     nixpkgs.overlays = [
         (self: super: {
