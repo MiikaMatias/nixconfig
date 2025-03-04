@@ -11,7 +11,7 @@
           };
           buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
-        xcompmgr # a required addition for alpha
+        picom # a required addition for alpha
     ];
 
     programs.zsh = {
