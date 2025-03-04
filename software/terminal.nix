@@ -6,8 +6,8 @@
           src = fetchFromGitHub {
             owner = "MiikaMatias";
             repo = "st";
-            rev = "dd982c4d943939286acccc18ce3519abe21063fa";
-            sha256="sha256-zGEEIG4YbT/nUclmEF80XYxft3BXNl1QODyXmxe4jkY=";
+            rev = "449306bca4cbf50e87d4d861edd04b77bfeac194";
+            sha256="sha256-qV8MMwcmqNMjVIDXTg5mntEhqHk9gOAkS2O5zSIe12M=";
           };
           buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
