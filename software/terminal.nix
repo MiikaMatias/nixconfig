@@ -15,15 +15,17 @@
     ];
 
     systemd.services.xcompmgr = {
-      wantedBy = [ "multi-user.target" ];
-      path = [ pkgs.coreutils ];
-      enable = true;
-      serviceConfig = {
-        User = "root";
-        Group = "root";
-        };
-      script = ''xcompmgr &'';
+    wantedBy = [ "graphical.target" ];  # Ensure it runs when the graphical session starts
+    enable = true;
+    serviceConfig = {
+      User = "miika";  # Replace with your actual username
+      Environment = "DISPLAY=:0";  # Ensure xcompmgr knows where to start
+      ExecStart = "${pkgs.xcompmgr}/bin/xcompmgr -c -C -f -r 10";  # Add typical options
+      Restart = "always";  # Restart if it crashes
     };
+  };
+
+
 
     programs.zsh = {
       enable=true;
