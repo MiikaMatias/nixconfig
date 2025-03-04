@@ -14,13 +14,15 @@
         xcompmgr
     ];
 
-    systemd.user.services.xcompmgr = {
-      description = "xcompmgr for alpha";
-      serviceConfig.PassEnvironment = "DISPLAY";
-      script = ''
-        xcompmgr &
-      '';
+    systemd.services.xcompmgr = {
       wantedBy = [ "multi-user.target" ];
+      path = [ pkgs.coreutils ];
+      enable = true;
+      serviceConfig = {
+        User = "root";
+        Group = "root";
+        };
+      script = ''xcompmgr &'';
     };
 
     programs.zsh = {
