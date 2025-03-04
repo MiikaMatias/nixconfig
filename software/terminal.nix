@@ -11,6 +11,7 @@
           };
           buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
+        xcompmgr
     ];
 
     programs.zsh = {
