@@ -1,6 +1,6 @@
 {config, pkgs, ...} :
 {
-    /*
+    
     environment.systemPackages = with pkgs; [
         (st.overrideAttrs (oldAttrs: rec {
             src = fetchGit {
@@ -8,7 +8,7 @@
             }; 
         }))
     ];
-*/
+
     programs.zsh = {
       enable=true;
       enableCompletion=true;
