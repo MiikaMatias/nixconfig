@@ -14,6 +14,7 @@
         xcompmgr
     ];
 
+    /* this shit is needed to run alpha patch */
     systemd.services.xcompmgr = {
       wantedBy = [ "graphical.target" ];
       enable = true;
@@ -24,7 +25,6 @@
         Restart = "always";
       };
     };
-
 
 
     programs.zsh = {
