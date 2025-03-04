@@ -6,6 +6,7 @@
             src = fetchGit {
                 url = "https://github.com/MiikaMatias/st.git";
             }; 
+            buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
     ];
 
