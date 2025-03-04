@@ -7,7 +7,7 @@
             owner = "MiikaMatias";
             repo = "st";
             rev = "dd982c4d943939286acccc18ce3519abe21063fa";
-            sha256 = "sha256-F4AOZqOYXu976eSv6J6bM03rWn6+TmNe56629LcHGmk=";
+            sha256="sha256-zGEEIG4YbT/nUclmEF80XYxft3BXNl1QODyXmxe4jkY=";
           };
           buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
