@@ -13,16 +13,15 @@
         }))
         xcompmgr
     ];
-    systemd.user.services.xcompmgr = {
-      description = "X Composite Manager";
-      after = [ "graphical-session.target" ];
-      wantedBy = [ "default.target" ];
-      serviceConfig = {
-          ExecStart = "xcompmgr";
-          Restart = "always";
-      };
-    };
 
+    systemd.user.services.xcompmgr = {
+      description = "xcompmgr for alpha";
+      serviceConfig.PassEnvironment = "DISPLAY";
+      script = ''
+        xcompmgr &
+      '';
+      wantedBy = [ "multi-user.target" ];
+    };
 
     programs.zsh = {
       enable=true;
