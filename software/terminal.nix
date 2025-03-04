@@ -11,8 +11,10 @@
           };
           buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
-        picom # a required addition for alpha
+         
     ];
+
+    services.picom.enable = true; # a required addition for alpha in st
 
     programs.zsh = {
       enable=true;
