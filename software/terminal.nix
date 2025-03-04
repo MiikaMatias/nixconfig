@@ -11,10 +11,9 @@
           };
           buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
-         
+        xcompmgr
     ];
 
-    services.picom.enable = true; # a required addition for alpha in st
 
     programs.zsh = {
       enable=true;
