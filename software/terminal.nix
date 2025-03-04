@@ -3,7 +3,7 @@
     environment.systemPackages = with pkgs; [
         st
     ];
-    
+
     nixpkgs.overlays = [
         (self: super: {
         st = super.st.overrideAttrs (oldAttrs: rec {

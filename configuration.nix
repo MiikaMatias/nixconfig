@@ -27,6 +27,7 @@
     ./software/browser.nix
     ./software/general.nix
     ./software/shell.nix
+    ./software/terminal.nix
 
     ./system/audio.nix
     ./system/bootloader.nix
