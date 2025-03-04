@@ -4,7 +4,6 @@
       gpu-screen-recorder-gtk
       droidcam
       gparted
-      kdenlive
       neofetch
       obsidian
       unzip
