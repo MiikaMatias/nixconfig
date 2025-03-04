@@ -2,7 +2,6 @@
 {
     environment.systemPackages = with pkgs; [
         dmenu
-        st
         feh
     ];
     services.xserver.windowManager.dwm.enable = true;
@@ -18,5 +17,4 @@
         })
         ]; 
     };
-
 }
