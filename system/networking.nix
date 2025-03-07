@@ -53,11 +53,6 @@
           adult = ["https://blocklistproject.github.io/Lists/porn.txt"];
           #You can add additional categories
         };
-        #Configure what block categories are used
-        clientGroupsBlock = {
-          default = [ "ads" ];
-          kids-ipad = ["ads" "adult"];
-        };
       };
     };
   };
