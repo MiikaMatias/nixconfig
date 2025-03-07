@@ -7,6 +7,5 @@
   environment.systemPackages = with pkgs; [
       w3m
       librewolf
-      min
   ];
 }
