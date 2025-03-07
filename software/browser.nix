@@ -4,8 +4,10 @@
       enable = true;
   };
 
+
   environment.systemPackages = with pkgs; [
       w3m
       librewolf
+      via
   ];
 }
