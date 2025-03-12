@@ -11,7 +11,7 @@
 
   systemd.services."dwm-bar" = {
     serviceConfig = {
-        ExecStart="dwm-status";
+              ExecStart = "/run/current-system/sw/bin/dwm-status";
         Type = "oneshot";
         User = "root";
     };
