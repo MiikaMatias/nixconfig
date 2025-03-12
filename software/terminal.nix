@@ -11,6 +11,7 @@
           };
           buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
+        (import ./../suckless/dwm/scripts/dwm-status.nix)
         xcompmgr
     ];
 
