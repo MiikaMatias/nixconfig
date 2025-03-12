@@ -1,5 +1,5 @@
 {
-  description = "Flake for my worshop";
+  description = "Flake for my workshop";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
