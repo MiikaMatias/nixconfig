@@ -4,7 +4,7 @@
     enable = true;
     systemCronJobs = [
       "*/5 * * * *      root    date >> /tmp/cron.log"
-      "* * * * *        root    update-dwm-bar"
+      "* * * * *        miika    update-dwm-bar"
     ];
   };
 }   
