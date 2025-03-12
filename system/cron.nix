@@ -4,7 +4,7 @@
     enable = true;
     systemCronJobs = [
       "*/5 * * * *      root    date >> /tmp/cron.log"
-      "*/1 * * * *      root    date >> /etc/nixos/suckless/dwm/scripts/dwm-status"
+      "*/1 * * * *      root    bash /etc/nixos/suckless/dwm/scripts/dwm-status"
     ];
   };
 }
