@@ -11,7 +11,7 @@
 
   systemd.services."dwm-bar" = {
     serviceConfig = {
-        ExecStart="${pkgs.screen}/bin/dwm-status";
+        ExecStart="dwm-status";
         Type = "oneshot";
         User = "root";
     };
