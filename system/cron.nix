@@ -11,9 +11,13 @@
 
   systemd.services."dwm-bar" = {
     serviceConfig = {
-        ExecStart="${pkgs.screen}/bin/bash /etc/nixos/suckless/dwm/scripts/dwm-status.bash";
+        ExecStart="${pkgs.screen}/bin/dwm-status";
         Type = "oneshot";
         User = "root";
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    (import ./../suckless/dwm/scripts/dwm-status.nix)
+  ];
 }   
