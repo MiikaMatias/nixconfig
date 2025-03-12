@@ -8,4 +8,12 @@
         Unit = "dwm-bar.service";
       };
   };
+
+  systemd.services."dwm-bar" = {
+    script = ''bash ./../suckless/dwm/scripts/dwm-status.bash'';
+    serviceConfig = {
+        Type = "oneshot";
+        User = "root";
+    };
+  };
 }   
