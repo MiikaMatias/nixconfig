@@ -3,7 +3,7 @@
   systemd.timers."dwm-bar" = {
     wantedBy = [ "timers.target" ];
       timerConfig = {
-        OnBootSec = "1m";
+        OnBootSec = "1s";
         OnUnitActiveSec = "1s";
         Unit = "dwm-bar.service";
         persistent = true;
