@@ -6,14 +6,15 @@
         OnBootSec = "1m";
         OnUnitActiveSec = "1m";
         Unit = "dwm-bar.service";
+        persistent = true;
       };
   };
 
   systemd.services."dwm-bar" = {
     serviceConfig = {
-              ExecStart = "/run/current-system/sw/bin/dwm-status";
+        ExecStart = "/run/current-system/sw/bin/dwm-status";
         Type = "oneshot";
-        User = "root";
+        User = "miika";
     };
   };
 
