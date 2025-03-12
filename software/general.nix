@@ -17,6 +17,7 @@
       lsof
       tree
       ngrok
+      kdePackages.kdenlive
       gimp
       arduino
       discord
