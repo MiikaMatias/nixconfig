@@ -30,12 +30,12 @@
 
     ./system/audio.nix
     ./system/bootloader.nix
-    ./system/cron.nix
     ./system/displayserver.nix
     ./system/lid.nix
     ./system/localization.nix
     ./system/networking.nix
     ./system/nvidia.nix
+    ./system/systemd-timers.nix
     ./system/users.nix
     ./system/windowmanager.nix
   ];
