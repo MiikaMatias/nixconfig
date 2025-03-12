@@ -4,7 +4,7 @@
     wantedBy = [ "timers.target" ];
       timerConfig = {
         OnBootSec = "1m";
-        OnUnitActiveSec = "1s";  # Runs every second
+        OnUnitActiveSec = "1s";
         Unit = "dwm-bar.service";
         persistent = true;
       };
