@@ -3,8 +3,8 @@
   services.cron = {
     enable = true;
     systemCronJobs = [
-      "*/5 * * * *   date >> /tmp/cron.log"
-      "* * * * *     bash /etc/nixos/suckless/dwm/scripts/dwm-status"
+      "*/5 * * * *      root    date >> /tmp/cron.log"
+      "* * * * *        root    bash /etc/nixos/suckless/dwm/scripts/dwm-status"
     ];
   };
 }
