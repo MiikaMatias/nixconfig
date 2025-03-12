@@ -12,7 +12,10 @@
 
   systemd.services."dwm-bar" = {
     serviceConfig = {
-        Environment = "DISPLAY:=0";
+        Environment = [
+          "DISPLAY=:0"
+          "XAUTHORITY=/home/miika/.Xauthority"
+        ];
         ExecStart = "/run/current-system/sw/bin/dwm-status";
         Type = "oneshot";
         User = "miika";
