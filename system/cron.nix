@@ -10,7 +10,7 @@
   };
 
   systemd.services."dwm-bar" = {
-    script = ''bash /etc/nixos/suckless/dwm/scripts/dwm-status.bash'';
+    script = ''/run/current-system/sw/bin/bash /etc/nixos/suckless/dwm/scripts/dwm-status.bash'';
     serviceConfig = {
         Type = "oneshot";
         User = "root";
