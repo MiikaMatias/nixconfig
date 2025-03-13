@@ -1,7 +1,10 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
   
-  services.geoclue2.enable = true;
+  services.geoclue2 = {
+    enable = true;  
+  };
+  location.provider = "geoclue2";
 
   time.timeZone = "America/Toronto";
 
