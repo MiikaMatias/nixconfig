@@ -1,5 +1,8 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
+  
+  services.geoclue2.enable = true;
+
   time.timeZone = "America/Toronto";
 
   i18n.defaultLocale = "en_US.UTF-8";

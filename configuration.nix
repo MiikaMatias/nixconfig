@@ -35,6 +35,7 @@
     ./system/localization.nix
     ./system/networking.nix
     ./system/nvidia.nix
+    ./system/redshift.nix
     ./system/systemd-timers.nix
     ./system/users.nix
     ./system/windowmanager.nix
