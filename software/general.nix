@@ -12,6 +12,7 @@
       iw
       wget
       yt-dlp
+      dropbox
       tmux
       scrot
       lsof
