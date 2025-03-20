@@ -7,8 +7,9 @@
       night = "1";
     };
     temperature = {
-      day = 4500;
-      night = 4500;
+      day = 2500;
+      night = 2500;
+
     };
   };
 }
