@@ -11,6 +11,7 @@
   nixpkgs.config.allowUnfree = true;
   imports =
   [
+    ./development/gamedev.nix
     ./development/k8s.nix
     ./development/languages.nix
     ./development/llvm.nix
