@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
-
-  environment.systemPackages = with pkgs; [
-      bluetoothctl
-  ];
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 }
