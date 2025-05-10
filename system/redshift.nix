@@ -9,7 +9,6 @@
     temperature = {
       day = 2500;
       night = 2500;
-
     };
   };
 }
