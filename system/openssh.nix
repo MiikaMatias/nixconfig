@@ -1,7 +1,7 @@
 { config, lib, pkgs, modulesPath, ... }:
 {
   enable = true;
-  ports = [ 22 ];
+  ports = [ 22 2222];
   settings = {
     PasswordAuthentication = true;
     AllowUsers = "miika";
