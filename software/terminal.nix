@@ -32,7 +32,7 @@
       enable=true;
       ohMyZsh = {
         enable = true;
-        plugins = [ "git" "sudo" "docker" "kubectl" ];
+        plugins = [ "git" "sudo" "docker" "kubectl" "zsh-256color"];
       };
       enableCompletion=true;
       autosuggestions.enable=true;
