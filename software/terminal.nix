@@ -30,6 +30,10 @@
 
     programs.zsh = {
       enable=true;
+      ohMyZsh = {
+        enable = true;
+        plugins = [ "git" "sudo" "docker" "kubectl" ];
+      };
       enableCompletion=true;
       autosuggestions.enable=true;
       shellAliases = {
