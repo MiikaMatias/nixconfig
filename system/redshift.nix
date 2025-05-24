@@ -1,5 +1,6 @@
 {config, pkgs, ...}: 
 {
+  /*
   services.redshift = {
     enable = true;
     brightness = {
@@ -11,4 +12,5 @@
       night = 2500;
     };
   };
+  */
 }

@@ -12,6 +12,7 @@
           buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
         xcompmgr
+        xclip
     ];
 
     /* this shit is needed to run alpha patch */
